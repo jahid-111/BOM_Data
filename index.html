@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
+<body class="bg-slate-500">
  
     <header class="text-center mt-4">
         <h2 class="text-5xl font-semibold">
@@ -13,7 +13,46 @@
         </h2>
     </header>
 
+    <main class="">
+
+        <section class="sm:w-4/12 px-5 mx-auto bg-yellow-400 rounded-xl my-5">
+           
+            <div class="flex flex-col gap-4 py-9 px-2">
+                <input id="product" class="bg-slate-200 py-2 w-10/12 rounded-md px-3 mx-auto" type="text" placeholder="Name of Product">
+                <input id="qtyProduct" class="bg-slate-200 py-2 w-10/12 rounded-md px-3 mx-auto" type="number" value="1" placeholder="Quantity">
+                <button id="buttonStore" class="bg-green-700 hover:bg-green-600 text-white font-semibold rounded-md  py-2 w-10/12 px-3 mx-auto">Add Storge</button>
+                <button id="deleteStore" class="bg-red-600 hover:bg-red-700 text-white font-semibold rounded-md  py-2 w-10/12 px-3 mx-auto">Delete Storge</button>
+            </div>
+            
+            <div>
+                <ul id="displayProduct">
+                    
+                </ul>
+            </div>
+    
+        </section>
+
+    </main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     <script src="scriptFile/getConsole.js"></script>
+    <script src="scriptFile/practise.js"></script>
 </body>
 </html>

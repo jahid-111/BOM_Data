@@ -31,7 +31,7 @@ console.log("practise")
 
       const saveDataInLocalStorge = (product, qty) => {
             const dataInLocalStorge = getDataFromLocalStorge();
-            console.log(dataInLocalStorge)
+            // console.log(dataInLocalStorge)
             dataInLocalStorge[product] = qty;
             const dataStingify = JSON.stringify(dataInLocalStorge);
             localStorage.setItem("User Data", dataStingify)
@@ -52,9 +52,21 @@ const diplayStoreInProduct = () => {
     const dataForLsIn = getDataFromLocalStorge();
         for( const itemName in dataForLsIn) {
             const qty =  dataForLsIn[itemName]
-            console.log(itemName, qty)
+            // console.log(itemName, qty)
             displayProduct(itemName, qty)
         }
 }
-
 diplayStoreInProduct()
+
+    const clearDisplay = () => {
+            const displayProduct =  document.getElementById('displayProduct');
+                  displayProduct.style.display = "none"
+            }
+
+
+    const deleteStore =  document.getElementById("deleteStore");
+        deleteStore.addEventListener('click', function () {
+        localStorage.removeItem("User Data")
+            clearDisplay()
+            diplayStoreInProduct()
+          })

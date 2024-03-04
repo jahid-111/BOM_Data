@@ -1,4 +1,4 @@
-console.log("practise")
+// console.log("practise")
 
 
     function getValueFromId(InputId) {

@@ -3,17 +3,20 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DOM For USER LS</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  
 </head>
-<body class="bg-slate-500">
+<body class="bg-zinc-400">
  
     <header class="text-center mt-4">
-        <h2 class="text-5xl font-semibold">
-            Data All About DOM
+        <h2 class="text-4xl text-white   font-semibold">
+            Data All About <br>
+            DOM
         </h2>
     </header>
 
-    <main class="">
+    <main class=" mx-4">
 
         <section class="sm:w-4/12 px-5 mx-auto bg-yellow-400 rounded-xl my-5">
            
@@ -30,6 +33,24 @@
                 </ul>
             </div>
     
+        </section>
+
+
+
+        <section class="bg-slate-600 sm:w-4/12 mx-auto rounded-md  ">
+            <h3 class="text-3xl text-center my-3 text-white">Cart</h3>
+            <div>
+                <div class="bg-slate-500 p-3 ">
+                    <div class="flex gap-3 text-white justify-around items-center"> 
+                        <img class="h-24 w-20 rounded-md flex justify-center items-center   " src="cart.jpg" alt="">
+                        <p id="nameOfProduct" class="font-semibold w-32">Smart Phone</p>
+                        <button id="decreaseBtn" class="px-2 py-1 h-10 w-8 rounded-lg  bg-gray-700 hover:bg-gray-600 font-extrabold ">-</button>
+                        <p id="qtyCart" class="text-gray-300 text-center w-10 font-semibold" type="number" value="0">0</p>
+                        <button id="increaseBtn" class="px-2 py-1 h-10 w-8 rounded-lg  bg-gray-700 hover:bg-gray-600 font-extrabold ">+</button>
+                        <h6>00.00</h6>
+                    </div>
+                </div>
+            </div>
         </section>
 
     </main>
@@ -54,5 +75,6 @@
 
     <script src="scriptFile/getConsole.js"></script>
     <script src="scriptFile/practise.js"></script>
+    <script src="scriptFile/cart.js"></script>
 </body>
 </html>

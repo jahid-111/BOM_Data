@@ -1,8 +1,6 @@
 const increaseBtn = document.getElementById('increaseBtn');
 const decreaseBtn = document.getElementById('decreaseBtn');
-
 const qtyCart =  document.getElementById('qtyCart')
-
 const nameOfProduct = document.getElementById('nameOfProduct')
 
 
@@ -38,6 +36,7 @@ const nameOfProduct = document.getElementById('nameOfProduct')
     qtyTag.innerText = decreasedValue;
     console.log('Decreased Value:', decreasedValue);
     setInLocalStorge(decreasedValue )
+    
 
   } decreaseBtn.addEventListener('click', decreaseValue); //Button --
   
@@ -60,3 +59,22 @@ const nameOfProduct = document.getElementById('nameOfProduct')
     console.log(typeof stringifyData)
     localStorage.setItem('Cart', stringifyData)
   }
+
+  const makeParse = () => {
+    const getDataForParse = localStorage.getItem('Cart');
+    const makeObj = JSON.parse(getDataForParse);
+    const values = [];
+
+    for (const key in makeObj) {
+        const value = makeObj[key];
+        values.push(value);
+    }
+    return values;
+};
+
+const setDisplayData = () => {
+    const getQtyId = document.getElementById('qtyCart');
+    const values = makeParse();
+     getQtyId.innerText = values.join(', ');
+};
+setDisplayData();
